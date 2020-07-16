@@ -120,7 +120,6 @@ abstract public class MainFragment
 
     protected void updatePreferences() {
         toggleProtocolSettingVisibility();
-        toggleDataFormatSettingVisibility();
         toggleEmulateMultipleUsersSettingVisibility();
 
         updatePresetPreferences();
@@ -143,7 +142,6 @@ abstract public class MainFragment
         switch (key) {
             case Key.TRANSMISSION_PROTOCOL:
                 toggleProtocolSettingVisibility();
-                toggleDataFormatSettingVisibility();
                 toggleEmulateMultipleUsersSettingVisibility();
                 insertPresetAddressAndPort();
                 break;
@@ -167,12 +165,6 @@ abstract public class MainFragment
         setPrefVisibleIfCondition(Key.SSL_PRESETS, protocol == Protocol.SSL);
         setPrefVisibleIfCondition(Key.TCP_PRESETS, protocol == Protocol.TCP);
         setPrefVisibleIfCondition(Key.UDP_PRESETS, protocol == Protocol.UDP);
-    }
-
-    private void toggleDataFormatSettingVisibility() {
-        /* Data format is only relevant for UDP, since TAK Server only takes XML data */
-        boolean showDataFormatSetting = Protocol.fromPrefs(prefs) == Protocol.UDP;
-        setPrefVisibleIfCondition(Key.DATA_FORMAT, showDataFormatSetting);
     }
 
     private void toggleEmulateMultipleUsersSettingVisibility() {

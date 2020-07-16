@@ -9,10 +9,12 @@ import com.jon.common.utils.Key;
 import com.jon.common.utils.PrefUtils;
 import com.jon.common.utils.Protocol;
 
-import java.io.IOException;
+import java.io.Closeable;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.List;
+
+import timber.log.Timber;
 
 abstract class CotThread extends Thread {
     protected final SharedPreferences prefs;
@@ -70,5 +72,13 @@ abstract class CotThread extends Thread {
 
     protected int periodMilliseconds() {
         return PrefUtils.getInt(prefs, Key.TRANSMISSION_PERIOD) * 1000;
+    }
+
+    protected void safeClose(Closeable closeable) {
+        try {
+            closeable.close();
+        } catch (Exception e) {
+            Timber.w(e);
+        }
     }
 }

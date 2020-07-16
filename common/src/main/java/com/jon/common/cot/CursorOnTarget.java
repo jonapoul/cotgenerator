@@ -64,6 +64,17 @@ public class CursorOnTarget {
         stale = start.add(10, TimeUnit.MINUTES);
     }
 
+    /* Sent to a TAK Server to request protobuf communication. See protocol.txt in the ATAK-CIV repo for more details */
+    public static byte[] takRequest(String uid) {
+        final UtcTimestamp time = UtcTimestamp.now();
+        return String.format(Locale.ENGLISH,
+                "<event version='2.0' uid=\"protouid\" type=\"t-x-takp-q\" time=\"%s\" start=\"%s\" stale=\"%s\" how=\"%s\">" +
+                        "<point lat=\"0.0\" lon=\"0.0\" hae=\"0.0\" ce=\"999999\" le=\"999999\"/><detail>" +
+                        "<TakControl><TakRequest version=\"1\"/></TakControl></detail></event>",
+                time.toString(), time.toString(), time.add(1, TimeUnit.MINUTES).toString(), CotHow.MG.get())
+                .getBytes();
+    }
+
     public byte[] toBytes(DataFormat dataFormat) {
         switch (dataFormat) {
             case XML:      return toXml();
