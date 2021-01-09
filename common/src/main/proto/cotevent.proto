@@ -1,7 +1,7 @@
 syntax = "proto3";
 option optimize_for = LITE_RUNTIME;
 
-package com.jon.common.cot.proto;
+package com.jonapoul.common.cot.proto;
 
 import "detail.proto";
 

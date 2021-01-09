@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.jon.cotbeacon">
+    package="com.jonapoul.cotbeacon">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -36,15 +36,21 @@
             android:exported="false"
             android:foregroundServiceType="location" />
 
-        <receiver android:name=".service.DozeReceiver" >
+        <receiver android:name=".service.DozeReceiver">
             <intent-filter>
                 <action android:name="android.os.action.DEVICE_IDLE_MODE_CHANGED" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".BeaconBootReceiver">
+        <receiver
+            android:name=".BeaconBootReceiver"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 

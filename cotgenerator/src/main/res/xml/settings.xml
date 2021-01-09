@@ -12,7 +12,7 @@
             app:title="@string/desc_random_callsigns"
             app:useSimpleSummaryProvider="true" />
 
-        <com.jon.common.prefs.RefreshCallsignPreference
+        <com.jonapoul.common.prefs.RefreshCallsignPreference
             android:key="@string/key_callsign"
             app:defaultValue="@string/def_callsign"
             app:iconSpaceReserved="false"

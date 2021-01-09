@@ -5,7 +5,7 @@
         android:icon="@drawable/target"
         app:title="@string/pref_category_cot_settings">
 
-        <com.jon.common.prefs.RefreshCallsignPreference
+        <com.jonapoul.common.prefs.RefreshCallsignPreference
             android:key="@string/key_callsign"
             app:iconSpaceReserved="false"
             app:title="@string/desc_callsign"

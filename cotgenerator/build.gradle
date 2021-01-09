@@ -9,7 +9,7 @@ android {
     buildToolsVersion versions.buildTools
 
     defaultConfig {
-        applicationId "com.jon.cotgenerator"
+        applicationId "com.jonapoul.cotgenerator"
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
         versionCode versions.versionCode
@@ -66,6 +66,8 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$versions.hilt"
     kapt "com.google.dagger:hilt-android-compiler:$versions.hilt"
     implementation "androidx.room:room-runtime:$versions.room"
+
+    testImplementation "io.mockk:mockk:$versions.mockk"
 }
 repositories {
     mavenCentral()

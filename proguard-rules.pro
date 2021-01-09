@@ -26,7 +26,7 @@
 
 # Navigation argument fixes
 -keep class * extends androidx.fragment.app.Fragment{}
--keep class com.jon.common.presets.OutputPreset
+-keep class com.jonapoul.common.presets.OutputPreset
 
 # Logback fixes
 -keep class ch.qos.** { *; }

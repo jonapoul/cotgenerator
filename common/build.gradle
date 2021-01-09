@@ -136,13 +136,13 @@ dependencies {
     api "com.android.support:multidex:$versions.multidex"
     api "com.rugovit.eventlivedata:eventlivedata:$versions.eventlivedata"
     implementation "com.github.jonapoul:geodesy:$versions.geodesy"
+    api "com.github.jonapoul:sharedprefs:$versions.sharedprefs"
     api "com.google.android.gms:play-services-location:$versions.play_services_location"
     api "com.google.protobuf:protobuf-lite:$versions.protobuf_lite"
 
     /* Testing */
     testImplementation "junit:junit:$versions.junit"
-    testImplementation "org.mockito:mockito-core:$versions.mockito"
-    testImplementation "com.github.IvanShafran:shared-preferences-mock:$versions.shared_preferences_mock"
+    testImplementation "io.mockk:mockk:$versions.mockk"
     testImplementation "org.hamcrest:hamcrest:$versions.hamcrest"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidx_junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"

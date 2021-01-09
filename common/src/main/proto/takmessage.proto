@@ -4,7 +4,7 @@ option optimize_for = LITE_RUNTIME;
 import "cotevent.proto";
 import "takcontrol.proto";
 
-package com.jon.common.cot.proto;
+package com.jonapoul.common.cot.proto;
 
 // Top level message sent for TAK Messaging Protocol Version 1.
 message TakMessage {

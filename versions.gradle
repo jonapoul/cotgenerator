@@ -40,6 +40,7 @@ ext.versions = [
         room                    : '2.2.6',
         rxandroid               : '2.1.1',
         rxjava                  : '2.2.20',
+        sharedprefs             : '1.0.4',
         slf4j                   : '1.7.30',
         timber                  : '4.7.1',
         viewmodel_ktx           : '2.2.0',

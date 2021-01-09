@@ -143,3 +143,8 @@ Thanks to the crew at the TAK Discord, most notably [Corvo](https://github.com/b
 - Add the option to post REST API messages to FTS instances
     - Would require me to identify whether a given server is an FTS
     - As an alternative to XML/Protobuf
+- Add a proper compass view to location fragment, instead of just the number
+- Red icons in error notificstions
+- move from gson to moshi
+- https://github.com/betterme-dev/Android-Toggle-Switch
+- add timeperiodpreference
