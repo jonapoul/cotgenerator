@@ -27,7 +27,7 @@ jobs:
           echo "}" >> keystore.gradle
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Build debug APK
+        run: ./gradlew assembleDebug
       - name: Run unit tests
         run: ./gradlew test
